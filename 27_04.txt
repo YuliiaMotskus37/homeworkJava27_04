@@ -1,0 +1,41 @@
+package basicJava.classworkTwo.homeworks;
+
+import java.util.Scanner;
+
+public class HWTree {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the first word consisting of an even number of characters: ");
+        String firstWord = scan.nextLine();
+
+        System.out.println("Enter the second word consisting of an even number of characters: ");
+        String secondWord = scan.nextLine();
+
+        String newStr = returnNewWord(firstWord, secondWord);
+        System.out.println(newStr);
+
+    }
+    public static String returnNewWord (String strOne, String strTwo) {
+
+        int lengthOfFirstString = strOne.length();
+        int lengthOfSecondString = strTwo.length();
+
+
+        int halfOfFirstString = lengthOfFirstString / 2;
+        int midleOfSecondString = lengthOfSecondString / 2;
+
+
+        String firstHalfOfFirstString = strOne.substring(0, halfOfFirstString);
+        String secondHalfOfSecondString = strTwo.substring(midleOfSecondString, lengthOfSecondString);
+        
+
+        String returnNewWorld = firstHalfOfFirstString + secondHalfOfSecondString;
+        System.out.println(returnNewWorld);
+
+        return returnNewWorld;
+
+
+    }
+}
